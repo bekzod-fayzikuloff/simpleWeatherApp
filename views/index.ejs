@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>NodeJS App</title>
+</head>
+<body>
+<div class="app">
+    <div class="app__header">
+        <% if (weather) { %>
+            <h1><%=weather%></h1>
+        <% } %>
+        <% if (error) { %>
+            <p class="error"><%=error %></p>
+        <% } %>
+    </div>
+    <form action="/" method="POST" class="app__content">
+        <div class="input">
+            <label for="city">Город</label>
+            <input type="text" id="city" placeholder="Названия города" name="city">
+        </div>
+        <button type="submit" class="btn">Показать погоду</button>
+    </form>
+</div>
+
+</body>
+</html>
